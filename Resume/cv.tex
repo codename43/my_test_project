@@ -1,0 +1,201 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ bottom=15mm,
+ }
+
+
+
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Arun \textsc{Vincent}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Thrissur, Kerala  | 28 September 1990 \\
+    \textsc{Address:}   & \#338, Koramangala 1st Block, Bangalore, India \\
+    \textsc{Phone:}     & +91 962 057 4217 | 944 690 3487\\
+    \textsc{email:}     & \href{mailto:arunpanikulam@gmail.com}{arunpanikulam@gmail.com}
+\end{tabular}
+
+\section{Profile Summary }
+\begin{itemize}
+\item Offering \textbf{3.5 years} of experience in software development and IT industry.
+\item Domain expertise in Data Warehousing \& ETL procedures/tools, mainly \textbf{Ab Initio}. Relevant experience in Ab Initio is \textbf{3.5 years.}
+\item Worked in \textbf{Hadoop/Big Data} space as well, mainly in Data Ingestion projects, with total relevant experience of \textbf{1.5 years.}
+\item Always followed \textbf{Agile SDLC \& Kanban} in entire professional experience.
+\end{itemize}
+
+
+\section{Technical Skills}
+\begin{tabular}{rl}
+Expert Knowledge:& \textsc{Ab Initio}, \textsc{Hadoop}, \textsc{SQL},  \textsc{Shell Scripting} \\
+& Teradata, Control M (Batch Scheduling) \\
+Intermediate Knowledge:& Apache \textsc{Pig}, Apache \textsc{Hive}, git Version Control System,\\
+& \textsc{Linux}, Apache \textsc{Spark}, HDFS, Apache \textsc{Presto},\\
+& \textsc{Python}, C\\
+Basic Knowledge:& MapReduce framework, \textsc{Java}, \textsc{C++}, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
+\end{tabular}
+
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & \textbf{Hadoop \& Ab Initio Developer} at \textsc{Wipro Technologies}, Bangalore \\\textsc{Sept 2015}&\emph{EDS Retail Bank, Capital One}\\&
+
+ \begin{itemize}
+ \item Worked on Apache Pig, Hive and other Hadoop tools/frameworks.
+ \item Did a \textsc{POC} on Apache Presto and few forays into \textsc{Amazon Web Services}. 
+ \item Closely worked with production environment of Hadoop \& ETL for support.
+ \item Handled Hadoop Data Ingestion projects along with Ab Initio ETL stories which mostly were root cause analysis \& enhancements over existing applications.
+ \end{itemize}
+ \\\multicolumn{2}{c}{} \\
+ \textsc{Sept 2015 -} & \textbf{Ab Initio ETL Developer} at \textsc{Wipro Technologies}, Bangalore \\\textsc{April 2014}&\emph{GC Initiative, Retail Bank, Capital One}\\&\begin{itemize}
+ \item Gained advanced Ab Initio ETL expertise by familiarizing with PDL, Calling API's, Parsing XML, JSON etc.
+ \item Project was about the integration of ING Bank with Capital One DataWarehouse.
+ \item Involved from project initializations, Design, Development, Testing and finally the Production deployment.
+ \end{itemize}\\\multicolumn{2}{c}{}
+ \end{tabular}
+ \\
+ \begin{tabular}{r|p{11cm}}
+ \textsc{April 2014 -} & \textbf{Ab Initio Developer} at \textsc{Wipro Technologies}, Bangalore \\\textsc{Feb 2013}&\emph{Commercial Bank, Capital One}\\&\begin{itemize}
+ \item Joined as a rookie \& received training in Ab Initio, Teradata \& Data Warehousing.
+ \item Acquired fundamentals of Ab Initio coding standards and General designs.
+ \item Familiarized with Ab Initio functionalities like EME, BRE, Conduct IT and most of the components.
+ \end{itemize}\\\multicolumn{2}{c}{}
+\end{tabular}
+
+
+
+
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{June} 2012 & B.Tech in \textsc{Computer Science \& Engineering}, \textbf{Calicut University}, Kerala\\
+& \textbf{Govt Engineering College}, Thrissur, Kerala\\
+& \textsc{Aggregate}: 61 \% \\&\\
+ \textsc{June} 2008 & Class XII / \textsc{AISSCE}, \textbf{CBSE} Board\\
+& \emph{Bharatiya Vidya Bhavan}, Irinjalakuda, Kerala\\
+& \textsc{Aggregate}: 85 \% \\&\\
+ \textsc{June} 2006 & Class X / \textsc{SSLC}, \textbf{Kerala State} Board\\
+& \emph{Don Bosco HSS}, Irinjalakuda, Kerala\\
+& \textsc{Aggregate}: 87 \%
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+\section{Academic Projects}
+\begin{tabular}{r|p{11cm}}
+\textsc{2011-12} & \textbf{B.Tech Final Year Project}, Govt Engg College, Thrissur \\&\emph{Linux Kernel Driver for custom-made USB Thermometer}\\&\footnotesize{The project was about building a custom thermometer device interfaced to a PC using USB and building a Linux device driver. A kernel level device driver provides an API for user applications to use the hardware device. This project introduced basic Embedded \& System programming(C language).}\\\multicolumn{2}{c}{} \\
+\textsc{2010-11} & \textbf{B.Tech Mini Project}, Govt Engg College, Thrissur \\&\emph{Image Steganography \& Cryptography Tool}\\&\footnotesize{A software tool that is capable of hiding confidential data in a lossy(JPEG) or lossless(PNG, BMP, TIFF) digital image after strong AES-256 encryption. The tool was written in Python, C and the UI using PyQt.}\\\multicolumn{2}{c}{} \\
+\textsc{2010} & \textbf{B.Tech Seminar}, Govt Engg College, Thrissur \\&\emph{Self-Organizing Real-Time Service Dissemination and Collection using Mobile
+Agents for Mobile Ad Hoc Networks}
+\end{tabular}
+
+
+
+
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{English:}&Fluent\\
+\textsc{Malayalam:}&Mother Tongue\\
+\textsc{Hindi:}&Intermediate Knowledge
+\end{tabular}
+
+
+
+\section{Interests \& Activities}
+Technology, Open-Source, Programming in general\\
+Football, Badminton, All Kinds of Sports Activities\\
+PC Gaming, Browsing
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
